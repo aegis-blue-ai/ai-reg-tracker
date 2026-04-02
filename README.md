@@ -3,6 +3,9 @@
 Python client for [Raymond Sun's Global AI Regulation Tracker API](https://globalairegtrackerapi-j66zxhj6dq-uc.a.run.app).
 Covers subscription-gated access to AI regulatory developments across ~100+ jurisdictions.
 
+More background on the tracker and API is available in the
+[official Substack post](https://techieray.substack.com/p/a-data-science-approach-to-tracking).
+
 ## Installation
 
 ```bash
@@ -113,7 +116,15 @@ When `category` is omitted the API searches `latest_news`, `sector_news`, and
 
 ### Market codes
 
-A selection of verified codes:
+Country markets use standard ISO 3166-1 alpha-2 country codes such as `US`,
+`CN`, `AU`, `CA`, `JP`, `IN`, `GB`, and `KR`.
+
+The API also supports non-country codes for aggregate views and market groups,
+including `global`, `G7`, `G20`, `OECD`, `ASEAN`, and `COE`.
+
+This package does not maintain an exhaustive supported-market list. Treat the
+upstream tracker documentation and API behavior as the authoritative source for
+what is currently available.
 
 | Code | Jurisdiction |
 |---|---|
